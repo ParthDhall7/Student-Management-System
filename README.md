@@ -74,9 +74,3 @@ Functional, negative, boundary value, database, and regression testing.
 ## How to Execute SQL Queries
 - DB Browser for SQLite: open `application/student_management.db` -> Execute SQL -> paste queries from `testing/database_test_cases.sql`.
 - Or from the `application` folder (Python 3.12+): `python -m sqlite3 student_management.db`
-
-## Test Status
-Test cases are provided as a **template** and are marked *Not Executed*. Execute them yourself and record actual results; no results are claimed here.
-
-## Future Improvements
-Admin login, pagination, automated tests (pytest / Selenium), CSV export, API testing with Postman.
