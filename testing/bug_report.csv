@@ -1,0 +1,4 @@
+﻿Bug ID,Bug Title,Module,Description,Steps to Reproduce,Expected Result,Actual Result,Severity,Priority,Status
+EXAMPLE-01 (HYPOTHETICAL - not a real bug),Duplicate roll number accepted,Add Student,Sample entry showing how to fill this template.,1. Add student Roll 101. 2. Add another student Roll 101.,Error 'Roll number already exists.',Second record saved,High,High,Example only
+EXAMPLE-02 (HYPOTHETICAL - not a real bug),Wrong message on empty search,Search,Sample entry showing how to fill this template.,1. Search for unknown text.,'No student found.',Blank page,Low,Low,Example only
+BUG-001,(Add real bugs here as you find them),,,,,,,,Open
