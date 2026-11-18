@@ -1,4 +1,4 @@
-# app.py - Flask routes for the Student Management System.
+import os 
 import re
 import sqlite3
 
@@ -7,7 +7,7 @@ from flask import Flask, flash, redirect, render_template, request, url_for
 import database
 
 app = Flask(__name__)
-app.secret_key = "change-this-secret-key"  # needed for flash messages
+app.secret_key = os.environ.get("SECRET_KEY", "dev-only-key")  
 
 EMAIL_PATTERN = re.compile(r"^[^@\s]+@[^@\s]+\.[^@\s]+$")  # basic email format check
 MAX_NAME_LENGTH = 100
@@ -161,7 +161,7 @@ def delete_student(student_id):
         flash("Student deleted successfully.", "success")
     return redirect(url_for("index"))
 
+database.init_db()  # create the database and table automatically
 
 if __name__ == "__main__":
-    database.init_db()  # create the database and table automatically
     app.run(debug=True)
